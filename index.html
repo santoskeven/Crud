@@ -1,0 +1,139 @@
+<DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Crud</title>
+    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="container_master">
+
+        <header class="header">
+
+            <div class="logo">
+                <img src="img/clipboard.svg">
+                <p>Crud</p>
+            </div><!--logo-->
+
+            <div class="prefers">
+                <img src="img/user.svg">
+                <img src="img/gear.svg">
+            </div><!--prefers-->
+
+        </header><!--header-->
+
+        <section class="content">
+            
+            <div class="navegacao">
+                
+                <div>
+                    <ul >
+                        <li>
+                            <a class="links ativa">Usuários</a>
+                        </li>
+                        <li>
+                            <a class="links">Novo</a>
+                        </li>
+                        <li>
+                            <a class="links">Novo</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid">
+                   <div class="grid-cover" id="grid-cover"><img src="img/grip-1.svg"></div>
+                   <div class="grid-cover" id="grid-cover"> <img src="img/grip-2.svg"></div>
+                </div>
+
+            </div><!--navegação-->
+
+            <div class="listen_users_box">
+
+                <div class="listen_user">
+                        
+                    <div class="header_listen">
+
+                        <h3 class="NumeroClientes"></h3>
+
+                        <div class="action_listen">
+                           <button class="btn" id="CadastrarCliente">CADASTRAR</button>
+                           <button class="btn" id="DeletarTudo">EXCLUIR</button>
+                        </div><!--action_listen-->
+
+                    </div><!--header_lister-->
+
+                    <div class="listen_users">
+                        <table id="tableClient" class="records">
+    
+                            <tbody class="tbody" id="tbdoy">
+                    
+                            </tbody><!--tbody-->
+                    
+                        </table>
+                    </div><!--listen_users-->
+
+                </div><!--listen_user-->
+                    
+            </div><!--listen_users-->
+
+        </section><!--content-->
+
+
+    </section><!--container_master-->
+
+
+    <!-- Modal para cadastrar um novo cliente -->
+
+    <section class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <header class="modal-header">
+                <h2>Novo cliente</h2>
+                <span class="modal-close" id="FecharModal">&#10006;</span>
+            </header>
+            
+            <form id="form" class="modal-form">
+                
+                <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente"
+                required>
+                <input type="email" id="email" class="modal-field" placeholder="e-mail do Cliente" required>
+                <input type="text" id="celular" class="modal-field" placeholder="Celular do Cliente" required>
+                <input type="text" id="cidade" class="modal-field" placeholder="Cidade do Cliente" required>    
+    
+            </form>
+    
+            <footer class="modal-footer">
+                <button id="salvar" class="button green">Salvar</button>
+                <button  id="cancelar" class="button blue">Cancelar</button> 
+            </footer>
+
+        </div><!--modal-content-->
+
+    </section><!--modal-->
+
+    <section class="confirm" id="confirm">
+        <div class="content-confirm">
+            <p id="msg_confirm"></p>
+           <div class="btns">
+            <button id="ConfirmBtn" value="sim">Sim</button>
+            <button id="AborteBtn" value="não">Não</button>
+           </div>
+        </div><!--content-confirm-->
+    </section><!--confirm-->
+
+   <script src="func.js"></script>
+
+</body>
+
+</html>
+
